@@ -387,6 +387,5 @@ func main() {
 function detectLang() {
   const stored = localStorage.getItem("lang");
   if (stored === "pt" || stored === "en") return stored;
-  const nav = (navigator.language || "pt").toLowerCase();
-  return nav.startsWith("en") ? "en" : "pt";
+  return "pt";
 }
