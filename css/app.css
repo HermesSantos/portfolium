@@ -385,8 +385,36 @@ img {
   padding: 1.1rem 1.15rem 1.2rem;
 }
 
-a.card:hover {
+button.card {
+  appearance: none;
+  width: 100%;
+  margin: 0;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+a.card:hover,
+button.card:hover {
   border-color: color-mix(in oklab, var(--signal) 40%, var(--border));
+}
+
+.contact-copy .copy-btn {
+  pointer-events: none;
+}
+
+.link-arrow {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1;
+  color: var(--muted-foreground);
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+a.card:hover .link-arrow {
+  color: var(--foreground);
+  transform: translate(2px, -2px);
 }
 
 .card + .card {

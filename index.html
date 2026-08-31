@@ -447,20 +447,32 @@
           </p>
 
           <div class="mt-10 grid gap-3 sm:grid-cols-2">
-            <a class="card block" href="mailto:hermessantos995@gmail.com">
-              <p class="mono-label" data-i18n="contact.email">E-mail</p>
+            <button type="button" class="card contact-copy" data-copy="hermessantos995@gmail.com" data-i18n-aria="contact.copyEmail" aria-label="Copiar e-mail">
+              <span class="flex items-start justify-between gap-3">
+                <span class="mono-label" data-i18n="contact.email">E-mail</span>
+                <span class="copy-btn" data-i18n="copy">copiar</span>
+              </span>
               <p class="mt-2">hermessantos995@gmail.com</p>
-            </a>
-            <a class="card block" href="tel:+5547933891264">
-              <p class="mono-label" data-i18n="contact.phone">Telefone</p>
+            </button>
+            <button type="button" class="card contact-copy" data-copy="+5547933891264" data-i18n-aria="contact.copyPhone" aria-label="Copiar telefone">
+              <span class="flex items-start justify-between gap-3">
+                <span class="mono-label" data-i18n="contact.phone">Telefone</span>
+                <span class="copy-btn" data-i18n="copy">copiar</span>
+              </span>
               <p class="mt-2">(47) 9 3389-1264</p>
-            </a>
+            </button>
             <a class="card block" href="https://www.linkedin.com/in/hermes-santos-8596031a0" target="_blank" rel="noreferrer">
-              <p class="mono-label" data-i18n="contact.linkedin">LinkedIn</p>
+              <span class="flex items-start justify-between gap-3">
+                <span class="mono-label" data-i18n="contact.linkedin">LinkedIn</span>
+                <span class="link-arrow" aria-hidden="true">↗</span>
+              </span>
               <p class="mt-2">linkedin.com/in/hermes-santos-8596031a0</p>
             </a>
             <a class="card block" href="https://github.com/HermesSantos" target="_blank" rel="noreferrer">
-              <p class="mono-label" data-i18n="contact.github">GitHub</p>
+              <span class="flex items-start justify-between gap-3">
+                <span class="mono-label" data-i18n="contact.github">GitHub</span>
+                <span class="link-arrow" aria-hidden="true">↗</span>
+              </span>
               <p class="mt-2">github.com/HermesSantos</p>
             </a>
           </div>

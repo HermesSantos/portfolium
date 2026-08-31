@@ -167,22 +167,41 @@ function setLang(lang) {
   applyI18n();
 }
 
+function flashCopied(el) {
+  if (!el) return;
+  el.textContent = t("copied");
+  el.dataset.copied = "true";
+  setTimeout(() => {
+    if (el.dataset.copied === "true") {
+      el.textContent = t("copy");
+      el.dataset.copied = "false";
+    }
+  }, 1600);
+}
+
+async function copyText(text, feedbackEl) {
+  try {
+    await navigator.clipboard.writeText(text);
+    flashCopied(feedbackEl);
+  } catch {
+    /* clipboard unavailable */
+  }
+}
+
 function setupCopy() {
   document.querySelectorAll(".copy-btn").forEach((btn) => {
+    if (btn.closest("[data-copy]")) return;
     btn.addEventListener("click", async () => {
       const block = btn.closest(".code-block");
       const pre = block && block.querySelector("pre");
       const source = (pre && pre.dataset.source) || (pre && pre.innerText) || "";
-      try {
-        await navigator.clipboard.writeText(source);
-        btn.textContent = t("copied");
-        btn.dataset.copied = "true";
-        setTimeout(() => {
-          if (btn.dataset.copied === "true") btn.textContent = t("copy");
-        }, 1600);
-      } catch {
-        /* clipboard unavailable */
-      }
+      await copyText(source, btn);
+    });
+  });
+
+  document.querySelectorAll("[data-copy]").forEach((el) => {
+    el.addEventListener("click", async () => {
+      await copyText(el.getAttribute("data-copy") || "", el.querySelector(".copy-btn"));
     });
   });
 }
