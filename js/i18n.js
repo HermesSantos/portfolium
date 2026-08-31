@@ -2,7 +2,7 @@ const I18N = {
   pt: {
     "meta.title": "Hermes da Costa Santos — Full Stack",
     "meta.description":
-      "Desenvolvedor Full Stack em Itajaí, SC. PHP, Laravel, NestJS, Vue.js, React e TypeScript.",
+      "Desenvolvedor Full Stack em Itajaí, SC. PHP, Laravel, NestJS, Go, Vue.js, React e TypeScript.",
     "nav.about": "Sobre",
     "nav.stack": "Stack",
     "nav.experience": "Experiência",
@@ -14,7 +14,7 @@ const I18N = {
     "hero.title": "Hermes da Costa Santos",
     "hero.tagline": "Programador Full Stack",
     "hero.lead":
-      "4 anos em PHP, Laravel, Node.js, NestJS, TypeScript, Vue.js e React. Arquitetura, integrações, testes e sistemas em produção — do legado à plataforma nova.",
+      "4 anos em PHP, Laravel, Node.js, NestJS, Go, TypeScript, Vue.js e React. Arquitetura, integrações, testes e sistemas em produção — do legado à plataforma nova.",
     "hero.cta.github": "Ver no GitHub",
     "hero.cta.linkedin": "LinkedIn",
     "hero.cta.email": "E-mail",
@@ -41,7 +41,7 @@ const I18N = {
       "Cypress, Pest e Jest. Estratégia de testes, infraestrutura e treino interno de QA.",
     "about.ship.mod.label": "modernização",
     "about.ship.mod.body":
-      "PHP legado virando React e Node. Laravel, Symfony, NestJS e Vue no dia a dia.",
+      "PHP legado virando React e Node. Laravel, Symfony, NestJS, Go e Vue no dia a dia.",
     "about.quote":
       "Complexidade deve ser resolvida no código quando puder ser resolvida no código. Não esconder. Eliminar.",
     "stack.index": "02",
@@ -58,6 +58,7 @@ const I18N = {
     "stack.symfony": "Symfony",
     "stack.node": "Node.js",
     "stack.nest": "NestJS",
+    "stack.go": "Go",
     "stack.mysql": "MySQL",
     "stack.pg": "PostgreSQL",
     "stack.cypress": "Cypress",
@@ -183,7 +184,7 @@ const I18N = {
   en: {
     "meta.title": "Hermes da Costa Santos — Full Stack",
     "meta.description":
-      "Full-stack developer in Itajaí, Brazil. PHP, Laravel, NestJS, Vue.js, React and TypeScript.",
+      "Full-stack developer in Itajaí, Brazil. PHP, Laravel, NestJS, Go, Vue.js, React and TypeScript.",
     "nav.about": "About",
     "nav.stack": "Stack",
     "nav.experience": "Experience",
@@ -195,7 +196,7 @@ const I18N = {
     "hero.title": "Hermes da Costa Santos",
     "hero.tagline": "Full Stack developer",
     "hero.lead":
-      "4 years in PHP, Laravel, Node.js, NestJS, TypeScript, Vue.js and React. Architecture, integrations, tests and production systems — from legacy to a new platform.",
+      "4 years in PHP, Laravel, Node.js, NestJS, Go, TypeScript, Vue.js and React. Architecture, integrations, tests and production systems — from legacy to a new platform.",
     "hero.cta.github": "View on GitHub",
     "hero.cta.linkedin": "LinkedIn",
     "hero.cta.email": "Email",
@@ -222,7 +223,7 @@ const I18N = {
       "Cypress, Pest and Jest. Test strategy, infrastructure and internal QA training.",
     "about.ship.mod.label": "modernization",
     "about.ship.mod.body":
-      "PHP legacy becoming React and Node. Laravel, Symfony, NestJS and Vue day to day.",
+      "PHP legacy becoming React and Node. Laravel, Symfony, NestJS, Go and Vue day to day.",
     "about.quote":
       "Complexity should be solved in code when it can be solved in code. Don't hide it. Remove it.",
     "stack.index": "02",
@@ -239,6 +240,7 @@ const I18N = {
     "stack.symfony": "Symfony",
     "stack.node": "Node.js",
     "stack.nest": "NestJS",
+    "stack.go": "Go",
     "stack.mysql": "MySQL",
     "stack.pg": "PostgreSQL",
     "stack.cypress": "Cypress",
@@ -362,7 +364,7 @@ const CODE_SNIPPETS = {
 
 type Hermes struct {
     Role  string // Full Stack
-    Stack string // Laravel, NestJS, Vue, React
+    Stack string // Laravel, NestJS, Go, Vue, React
     Years int    // 4
 }
 
@@ -373,7 +375,7 @@ func main() {
 
 type Hermes struct {
     Role  string // Full Stack
-    Stack string // Laravel, NestJS, Vue, React
+    Stack string // Laravel, NestJS, Go, Vue, React
     Years int    // 4
 }
 
