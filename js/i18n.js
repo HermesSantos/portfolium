@@ -18,7 +18,7 @@ const I18N = {
     "hero.cta.github": "Ver no GitHub",
     "hero.cta.linkedin": "LinkedIn",
     "hero.cta.email": "E-mail",
-    "hero.code.file": "hermes.kf",
+    "hero.code.file": "hermes.go",
     "copy": "copiar",
     "copied": "copiado",
     "about.index": "01",
@@ -199,7 +199,7 @@ const I18N = {
     "hero.cta.github": "View on GitHub",
     "hero.cta.linkedin": "LinkedIn",
     "hero.cta.email": "Email",
-    "hero.code.file": "hermes.kf",
+    "hero.code.file": "hermes.go",
     "copy": "copy",
     "copied": "copied",
     "about.index": "01",
@@ -358,22 +358,26 @@ const I18N = {
 };
 
 const CODE_SNIPPETS = {
-  pt: `class Hermes(
-    String role,      // Full Stack
-    String stack,     // Laravel, NestJS, Vue, React
-    Int years         // 4
-)
+  pt: `package main
 
-main() {
+type Hermes struct {
+    Role  string // Full Stack
+    Stack string // Laravel, NestJS, Vue, React
+    Years int    // 4
+}
+
+func main() {
     println("Itajaí, SC")
 }`,
-  en: `class Hermes(
-    String role,      // Full Stack
-    String stack,     // Laravel, NestJS, Vue, React
-    Int years         // 4
-)
+  en: `package main
 
-main() {
+type Hermes struct {
+    Role  string // Full Stack
+    Stack string // Laravel, NestJS, Vue, React
+    Years int    // 4
+}
+
+func main() {
     println("Itajaí, Brazil")
 }`,
 };

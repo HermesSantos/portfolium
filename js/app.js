@@ -1,50 +1,43 @@
 const KEYWORDS = new Set([
-  "fun",
-  "class",
+  "package",
+  "import",
+  "type",
+  "struct",
+  "func",
   "var",
-  "val",
+  "const",
   "return",
   "if",
   "else",
-  "while",
   "for",
-  "new",
+  "range",
+  "go",
+  "defer",
   "interface",
-  "record",
-  "extends",
-  "implements",
-  "import",
-  "package",
-  "try",
-  "catch",
-  "finally",
-  "throw",
-  "public",
-  "private",
-  "final",
-  "static",
-  "this",
+  "map",
+  "chan",
+  "select",
+  "switch",
+  "case",
+  "default",
+  "break",
+  "continue",
   "true",
   "false",
-  "null",
-  "main",
+  "nil",
 ]);
 
 const TYPES = new Set([
-  "String",
-  "Int",
-  "Long",
-  "Double",
-  "Float",
-  "Boolean",
-  "Char",
-  "Void",
-  "List",
-  "Map",
-  "Set",
+  "string",
+  "int",
+  "int64",
+  "bool",
+  "byte",
+  "rune",
+  "error",
+  "float64",
   "Hermes",
-  "Object",
-  "Exception",
+  "any",
 ]);
 
 function tokenize(line) {
@@ -78,7 +71,7 @@ function tokenize(line) {
       const after = rest.slice(w.length);
       let cls = "";
       if (KEYWORDS.has(w)) cls = "tok-kw";
-      else if (TYPES.has(w) || /^[A-Z]/.test(w)) cls = "tok-type";
+      else if (TYPES.has(w)) cls = "tok-type";
       else if (after.startsWith("(")) cls = "tok-fn";
       push(w, cls);
       i += w.length;

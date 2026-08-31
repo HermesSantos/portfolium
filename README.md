@@ -1,6 +1,6 @@
 # Portfólio — Hermes da Costa Santos
 
-Site estático (HTML, CSS, JS + Tailwind via CDN), inspirado no visual editorial do [Kof](https://koflang.github.io/). Sem framework, sem build. Pronto para GitHub Pages.
+Site estático (HTML, CSS, JS + Tailwind via CDN). Sem framework, sem build. Pronto para GitHub Pages.
 
 ## Publicar no GitHub Pages
 
