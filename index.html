@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hermes da Costa Santos — Full Stack</title>
+    <meta
+      name="description"
+      content="Desenvolvedor Full Stack em Itajaí, SC. Laravel, NestJS, Vue.js, React, TypeScript. Menos cerimônia. Mais software."
+    />
+    <meta property="og:title" content="Hermes da Costa Santos — Full Stack" />
+    <meta
+      property="og:description"
+      content="Menos cerimônia. Mais software. Full stack em Itajaí, SC."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#1c1d22" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: "var(--background)",
+              foreground: "var(--foreground)",
+              surface: "var(--surface)",
+              "surface-2": "var(--surface-2)",
+              muted: {
+                DEFAULT: "var(--muted)",
+                foreground: "var(--muted-foreground)",
+              },
+              border: "var(--border)",
+              primary: {
+                DEFAULT: "var(--primary)",
+                foreground: "var(--primary-foreground)",
+              },
+              signal: "var(--signal)",
+              "signal-dim": "var(--signal-dim)",
+              ok: "var(--ok)",
+              wip: "var(--wip)",
+              planned: "var(--planned)",
+            },
+            fontFamily: {
+              sans: ['"Space Grotesk"', "ui-sans-serif", "system-ui", "sans-serif"],
+              mono: ['"JetBrains Mono"', "ui-monospace", "SFMono-Regular", "monospace"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              sm: "0.125rem",
+            },
+            maxWidth: {
+              page: "72rem",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body class="bg-background text-foreground antialiased">
+    <a class="skip-link" href="#conteudo" data-i18n="skip">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="mx-auto flex max-w-page items-center justify-between gap-4 px-4 py-3 sm:px-6">
+        <a href="#topo" class="flex items-center gap-2.5">
+          <span class="brand-mark">HS</span>
+          <span class="font-mono text-sm tracking-wide">HERMES</span>
+        </a>
+
+        <nav class="hidden items-center gap-5 lg:flex" aria-label="Principal">
+          <a class="nav-link" href="#sobre" data-i18n="nav.about">Sobre</a>
+          <a class="nav-link" href="#stack" data-i18n="nav.stack">Stack</a>
+          <a class="nav-link" href="#experiencia" data-i18n="nav.experience">Experiência</a>
+          <a class="nav-link" href="#projetos" data-i18n="nav.projects">Projetos</a>
+          <a class="nav-link" href="#contato" data-i18n="nav.contact">Contato</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <div class="lang-toggle" role="group" aria-label="Idioma">
+            <button type="button" data-lang="pt" aria-pressed="true">PT</button>
+            <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+          <a
+            class="btn btn-primary hidden sm:inline-flex"
+            href="https://github.com/HermesSantos"
+            target="_blank"
+            rel="noreferrer"
+            data-i18n="nav.github"
+          >
+            GitHub
+          </a>
+          <button
+            id="menu-btn"
+            class="menu-btn lg:hidden"
+            type="button"
+            aria-expanded="false"
+            data-i18n-aria="nav.menu"
+            aria-label="Alternar menu de navegação"
+          >
+            ≡
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-nav" class="mobile-nav lg:hidden">
+        <nav class="mx-auto flex max-w-page flex-col gap-1 px-4 py-3 sm:px-6" aria-label="Mobile">
+          <a class="nav-link rounded-sm px-2 py-2" href="#sobre" data-i18n="nav.about">Sobre</a>
+          <a class="nav-link rounded-sm px-2 py-2" href="#stack" data-i18n="nav.stack">Stack</a>
+          <a class="nav-link rounded-sm px-2 py-2" href="#experiencia" data-i18n="nav.experience">Experiência</a>
+          <a class="nav-link rounded-sm px-2 py-2" href="#projetos" data-i18n="nav.projects">Projetos</a>
+          <a class="nav-link rounded-sm px-2 py-2" href="#contato" data-i18n="nav.contact">Contato</a>
+          <a
+            class="nav-link rounded-sm px-2 py-2"
+            href="https://github.com/HermesSantos"
+            target="_blank"
+            rel="noreferrer"
+            data-i18n="nav.github"
+          >
+            GitHub
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section id="topo" class="hero-wrap grid-bg border-b border-border">
+        <div class="relative mx-auto grid max-w-page gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-2 lg:items-center lg:py-24">
+          <div>
+            <div class="mb-5 flex items-center gap-3">
+              <img
+                class="avatar"
+                src="https://avatars.githubusercontent.com/u/94411142?v=4"
+                alt="Hermes da Costa Santos"
+                width="52"
+                height="52"
+              />
+              <p class="mono-label" data-i18n="hero.eyebrow">Itajaí, SC · Full Stack</p>
+            </div>
+            <h1 class="text-[clamp(2.2rem,6vw,3.6rem)] font-medium leading-[1.05] tracking-tight" data-i18n="hero.title">
+              Hermes da Costa Santos
+            </h1>
+            <p class="mt-4 text-xl text-signal" data-i18n="hero.tagline">Menos cerimônia. Mais software.</p>
+            <p class="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground" data-i18n="hero.lead">
+              Uma linguagem de trabalho. Vários sistemas. Full stack com 4 anos em PHP, Laravel, Node.js, NestJS, TypeScript, Vue.js e React — do legado em produção à arquitetura nova.
+            </p>
+            <div class="mt-7 flex flex-wrap gap-2.5">
+              <a class="btn btn-primary" href="https://github.com/HermesSantos" target="_blank" rel="noreferrer" data-i18n="hero.cta.github">Ver no GitHub</a>
+              <a class="btn btn-ghost" href="https://www.linkedin.com/in/hermes-santos-8596031a0" target="_blank" rel="noreferrer" data-i18n="hero.cta.linkedin">LinkedIn</a>
+              <a class="btn btn-ghost" href="mailto:hermessantos995@gmail.com" data-i18n="hero.cta.email">E-mail</a>
+            </div>
+          </div>
+
+          <div class="code-block">
+            <div class="code-block-bar">
+              <span data-i18n="hero.code.file">hermes.kf</span>
+              <button class="copy-btn" type="button" data-i18n="copy">copiar</button>
+            </div>
+            <pre id="hero-code"></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre" class="border-b border-border">
+        <div class="mx-auto max-w-page px-4 py-16 sm:px-6 sm:py-20">
+          <p class="flex items-center gap-3">
+            <span class="section-index" data-i18n="about.index">01</span>
+            <span class="mono-label" data-i18n="about.eyebrow">Identidade</span>
+          </p>
+          <h2 class="section-title" data-i18n="about.title">
+            Full stack com orientação a Clean Code, desempenho e qualidade — em times ágeis e multidisciplinares.
+          </h2>
+          <p class="section-lead" data-i18n="about.lead">
+            Atuação em arquitetura de sistemas, desenvolvimento end-to-end, integração de serviços externos (pagamentos, vídeos, IA) e testes automatizados. Docker, Git, CI/CD, MySQL e PostgreSQL. Liderança técnica em estratégia de testes e mentoria de QA.
+          </p>
+
+          <div class="mt-10">
+            <div class="ascii-block">
+              <p class="mono-label" data-i18n="about.right.label">o que eu entrego</p>
+              <pre data-i18n="about.right.body">software em produção
+       │
+       ├── arquitetura end-to-end
+       ├── integrações (pagamentos, vídeo, IA)
+       ├── testes automatizados
+       ├── legado modernizado
+       └── mentoria de QA</pre>
+            </div>
+            <div class="mt-4 grid gap-3 sm:grid-cols-2">
+              <div class="card">
+                <p class="mono-label" data-i18n="about.ship.prod.label">produção</p>
+                <p class="mt-2 text-sm leading-relaxed text-muted-foreground" data-i18n="about.ship.prod.body">Sistemas estáveis em órgãos públicos, agro e educação — com correção rápida quando quebra.</p>
+              </div>
+              <div class="card">
+                <p class="mono-label" data-i18n="about.ship.int.label">integrações</p>
+                <p class="mt-2 text-sm leading-relaxed text-muted-foreground" data-i18n="about.ship.int.body">Vimeo, Panda Video, Gemini, Asaas e AbacatePay ligados ao produto, não soltos no meio do caminho.</p>
+              </div>
+              <div class="card">
+                <p class="mono-label" data-i18n="about.ship.qa.label">qualidade</p>
+                <p class="mt-2 text-sm leading-relaxed text-muted-foreground" data-i18n="about.ship.qa.body">Cypress, Pest e Jest. Estratégia de testes, infraestrutura e treino interno de QA.</p>
+              </div>
+              <div class="card">
+                <p class="mono-label" data-i18n="about.ship.mod.label">modernização</p>
+                <p class="mt-2 text-sm leading-relaxed text-muted-foreground" data-i18n="about.ship.mod.body">PHP legado virando React e Node. Laravel, Symfony, NestJS e Vue no dia a dia.</p>
+              </div>
+            </div>
+          </div>
+
+          <blockquote class="quote mt-10" data-i18n="about.quote">
+            Complexidade deve ser resolvida no código quando puder ser resolvida no código. Não esconder. Eliminar.
+          </blockquote>
+        </div>
+      </section>
+
+      <section id="stack" class="border-b border-border">
+        <div class="mx-auto max-w-page px-4 py-16 sm:px-6 sm:py-20">
+          <p class="flex items-center gap-3">
+            <span class="section-index" data-i18n="stack.index">02</span>
+            <span class="mono-label" data-i18n="stack.eyebrow">Ferramentas</span>
+          </p>
+          <h2 class="section-title" data-i18n="stack.title">A stack que uso para construir, manter e escalar.</h2>
+          <p class="section-lead" data-i18n="stack.lead">
+            Front, back, dados, qualidade, DevOps e integrações. Tudo o que está no currículo — sem inflar com o que não uso de verdade.
+          </p>
+
+          <div class="mt-10 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="chip"><span class="chip-name" data-i18n="stack.vue">Vue.js</span><span class="chip-cat" data-i18n="cat.front">Front-end</span></div>
+            <div class="chip"><span class="chip-name" data-i18n="stack.react">React</span><span class="chip-cat" data-i18n="cat.front">Front-end</span></div>
+            <div class="chip"><span class="chip-name" data-i18n="stack.ts">TypeScript</span><span class="chip-cat" data-i18n="cat.front">Front-end</span></div>
+            <div class="chip"><span class="chip-name" data-i18n="stack.tw">Tailwind</span><span class="chip-cat" data-i18n="cat.front">Front-end</span></div>
+            <div class="chip"><span class="chip-name" data-i18n="stack.bs">Bootstrap</span><span class="chip-cat" data-i18n="cat.front">Front-end</span></div>
+            <div class="chip"><span class="chip-name" data-i18n="stack.laravel">Laravel</span><span class="chip-cat" data-i18n="cat.back">Back-end</span></div>
+            <div class="chip"><span class="chip-name" data-i18n="stack.symfony">Symfony</span><span class="chip-cat" data-i18n="cat.back">Back-end</span></div>
+            <div class="chip"><span class="chip-name" data-i18n="stack.node">Node.js</span><span class="chip-cat" data-i18n="cat.back">Back-end</span></div>
+            <div class="chip"><span class="chip-name" data-i18n="stack.nest">NestJS</span><span class="chip-cat" data-i18n="cat.back">Back-end</span></div>
+            <div class="chip"><span class="chip-name" data-i18n="stack.mysql">MySQL</span><span class="chip-cat" data-i18n="cat.data">Dados</span></div>
+            <div class="chip"><span class="chip-name" data-i18n="stack.pg">PostgreSQL</span><span class="chip-cat" data-i18n="cat.data">Dados</span></div>
+            <div class="chip"><span class="chip-name" data-i18n="stack.cypress">Cypress</span><span class="chip-cat" data-i18n="cat.qa">Qualidade</span></div>
+            <div class="chip"><span class="chip-name" data-i18n="stack.pest">Pest</span><span class="chip-cat" data-i18n="cat.qa">Qualidade</span></div>
+            <div class="chip"><span class="chip-name" data-i18n="stack.jest">Jest</span><span class="chip-cat" data-i18n="cat.qa">Qualidade</span></div>
+            <div class="chip"><span class="chip-name" data-i18n="stack.git">Git</span><span class="chip-cat" data-i18n="cat.ops">DevOps</span></div>
+            <div class="chip"><span class="chip-name" data-i18n="stack.docker">Docker</span><span class="chip-cat" data-i18n="cat.ops">DevOps</span></div>
+            <div class="chip"><span class="chip-name" data-i18n="stack.cicd">CI/CD</span><span class="chip-cat" data-i18n="cat.ops">DevOps</span></div>
+            <div class="chip"><span class="chip-name" data-i18n="stack.vimeo">Vimeo</span><span class="chip-cat" data-i18n="cat.int">Integrações</span></div>
+            <div class="chip"><span class="chip-name" data-i18n="stack.panda">Panda Video</span><span class="chip-cat" data-i18n="cat.int">Integrações</span></div>
+            <div class="chip"><span class="chip-name" data-i18n="stack.gemini">Gemini</span><span class="chip-cat" data-i18n="cat.int">Integrações</span></div>
+            <div class="chip"><span class="chip-name" data-i18n="stack.asaas">Asaas</span><span class="chip-cat" data-i18n="cat.int">Integrações</span></div>
+            <div class="chip"><span class="chip-name" data-i18n="stack.abacate">AbacatePay</span><span class="chip-cat" data-i18n="cat.int">Integrações</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experiencia" class="border-b border-border">
+        <div class="mx-auto max-w-page px-4 py-16 sm:px-6 sm:py-20">
+          <p class="flex items-center gap-3">
+            <span class="section-index" data-i18n="exp.index">03</span>
+            <span class="mono-label" data-i18n="exp.eyebrow">Trajetória</span>
+          </p>
+          <h2 class="section-title" data-i18n="exp.title">Do trainee ao sênior. Três frentes atuais, o mesmo critério.</h2>
+          <p class="section-lead" data-i18n="exp.lead">
+            Sistemas educacionais públicos, gestão pecuária e plataforma de aprendizado. Produção, não demo.
+          </p>
+
+          <div class="mt-10 grid gap-4">
+            <article class="card">
+              <div class="mb-3 flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <h3 class="text-lg font-medium" data-i18n="exp.gestorpec.company">Gestorpec</h3>
+                  <p class="mt-1 text-sm text-muted-foreground" data-i18n="exp.gestorpec.role">Desenvolvedor Full Stack — Sênior</p>
+                </div>
+                <span class="badge badge-ok" data-i18n="status.current">Atual</span>
+              </div>
+              <p class="mono-label mb-4" data-i18n="exp.gestorpec.meta">Setor agro / pecuária · atual</p>
+              <ul class="space-y-2 text-sm leading-relaxed text-muted-foreground">
+                <li data-i18n="exp.gestorpec.b1">Evolução de sistema de gestão pecuária: rebanho, pesagens e operações rurais.</li>
+                <li data-i18n="exp.gestorpec.b2">Decisões técnicas, arquitetura e organização do projeto.</li>
+                <li data-i18n="exp.gestorpec.b3">Backend Laravel/Symfony e frontend Vue.js, com integração entre camadas.</li>
+                <li data-i18n="exp.gestorpec.b4">Modelagem e otimização MySQL com foco em performance e consistência.</li>
+                <li data-i18n="exp.gestorpec.b5">Rotinas complexas: importação XLSX/CSV, cálculos zootécnicos e regras de negócio.</li>
+                <li data-i18n="exp.gestorpec.b6">Organização de demandas, priorização e correção rápida de falhas em produção.</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="mb-3 flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <h3 class="text-lg font-medium" data-i18n="exp.conectaa.company">Conectaa</h3>
+                  <p class="mt-1 text-sm text-muted-foreground" data-i18n="exp.conectaa.role">Desenvolvedor Full Stack — Pleno</p>
+                </div>
+                <span class="badge badge-ok" data-i18n="status.current">Atual</span>
+              </div>
+              <p class="mono-label mb-4" data-i18n="exp.conectaa.meta">Secretaria de Educação de Itajaí · atual</p>
+              <ul class="space-y-2 text-sm leading-relaxed text-muted-foreground">
+                <li data-i18n="exp.conectaa.b1">Sistemas educacionais usados por órgãos públicos.</li>
+                <li data-i18n="exp.conectaa.b2">Backend Symfony e NestJS, frontend Vue.js.</li>
+                <li data-i18n="exp.conectaa.b3">Integração entre serviços e APIs, comunicação entre sistemas.</li>
+                <li data-i18n="exp.conectaa.b4">Modelagem PostgreSQL e MySQL com foco em integridade e escala.</li>
+                <li data-i18n="exp.conectaa.b5">Funcionalidades alinhadas às regras de negócio da Secretaria.</li>
+                <li data-i18n="exp.conectaa.b6">Levantamento de requisitos, fluxos de domínio e estabilidade em produção.</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="mb-3 flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <h3 class="text-lg font-medium" data-i18n="exp.avapro.company">AVAPRO</h3>
+                  <p class="mt-1 text-sm text-muted-foreground" data-i18n="exp.avapro.role">Pleno</p>
+                </div>
+                <span class="badge badge-ok" data-i18n="status.current">Atual</span>
+              </div>
+              <p class="mono-label mb-4" data-i18n="exp.avapro.meta">Itajaí, SC · 07/2023 — atual</p>
+              <ul class="space-y-2 text-sm leading-relaxed text-muted-foreground">
+                <li data-i18n="exp.avapro.b1">Manutenção e evolução do sistema principal, com alta disponibilidade.</li>
+                <li data-i18n="exp.avapro.b2">Jogo interativo em Vue.js para reforço de aprendizado.</li>
+                <li data-i18n="exp.avapro.b3">Site institucional com Vue.js e Node.js.</li>
+                <li data-i18n="exp.avapro.b4">Plataforma de vídeos interativos (Vimeo e Panda Video), escala e UX.</li>
+                <li data-i18n="exp.avapro.b5">Liderança da estratégia de testes Cypress: infraestrutura e treinamentos internos.</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="mb-3 flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <h3 class="text-lg font-medium" data-i18n="exp.drcuidado.company">DrCuidado</h3>
+                  <p class="mt-1 text-sm text-muted-foreground" data-i18n="exp.drcuidado.role">Junior</p>
+                </div>
+                <span class="badge badge-done" data-i18n="status.closed">Encerrado</span>
+              </div>
+              <p class="mono-label mb-4" data-i18n="exp.drcuidado.meta">Itajaí, SC · 12/2022 — 07/2023</p>
+              <ul class="space-y-2 text-sm leading-relaxed text-muted-foreground">
+                <li data-i18n="exp.drcuidado.b1">Manutenção e correção da plataforma principal em PHP, em produção.</li>
+                <li data-i18n="exp.drcuidado.b2">Deploys, PostgreSQL e resolução de erros críticos.</li>
+                <li data-i18n="exp.drcuidado.b3">Nova plataforma com React e Node.js, saindo do legado com melhor desempenho.</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="mb-3 flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <h3 class="text-lg font-medium" data-i18n="exp.trainee.company">AVAPRO</h3>
+                  <p class="mt-1 text-sm text-muted-foreground" data-i18n="exp.trainee.role">Trainee</p>
+                </div>
+                <span class="badge badge-done" data-i18n="status.closed">Encerrado</span>
+              </div>
+              <p class="mono-label mb-4" data-i18n="exp.trainee.meta">Itajaí, SC · 05/2022 — 12/2022</p>
+              <ul class="space-y-2 text-sm leading-relaxed text-muted-foreground">
+                <li data-i18n="exp.trainee.b1">Manutenção e evolução do sistema principal da empresa.</li>
+                <li data-i18n="exp.trainee.b2">Funcionalidades e correções visando estabilidade e disponibilidade.</li>
+                <li data-i18n="exp.trainee.b3">Participação no desenvolvimento de soluções em Vue.js.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projetos" class="border-b border-border">
+        <div class="mx-auto max-w-page px-4 py-16 sm:px-6 sm:py-20">
+          <p class="flex items-center gap-3">
+            <span class="section-index" data-i18n="proj.index">04</span>
+            <span class="mono-label" data-i18n="proj.eyebrow">Código aberto</span>
+          </p>
+          <h2 class="section-title" data-i18n="proj.title">Projetos públicos. O restante mora em produção.</h2>
+          <p class="section-lead" data-i18n="proj.lead">
+            Seleção curada do GitHub — ferramentas, experimentos de linguagem e bases de arquitetura. Trabalho de cliente não entra aqui.
+          </p>
+
+          <div class="mt-10 grid gap-3 sm:grid-cols-2">
+            <a class="card block transition-colors hover:border-signal/40" href="https://github.com/HermesSantos/aila" target="_blank" rel="noreferrer">
+              <div class="mb-3 flex items-center justify-between gap-3">
+                <h3 class="font-mono text-sm">aila</h3>
+                <span class="chip-cat" data-i18n="proj.lang.js">JavaScript</span>
+              </div>
+              <p class="text-sm leading-relaxed text-muted-foreground" data-i18n="proj.aila.desc">Mensagens de commit geradas por IA a partir da linha de comando.</p>
+            </a>
+            <a class="card block transition-colors hover:border-signal/40" href="https://github.com/HermesSantos/aila_go" target="_blank" rel="noreferrer">
+              <div class="mb-3 flex items-center justify-between gap-3">
+                <h3 class="font-mono text-sm">aila_go</h3>
+                <span class="chip-cat" data-i18n="proj.lang.go">Go</span>
+              </div>
+              <p class="text-sm leading-relaxed text-muted-foreground" data-i18n="proj.ailago.desc">Port de Aila (Node.js) para Go.</p>
+            </a>
+            <a class="card block transition-colors hover:border-signal/40" href="https://github.com/HermesSantos/orion" target="_blank" rel="noreferrer">
+              <div class="mb-3 flex items-center justify-between gap-3">
+                <h3 class="font-mono text-sm">orion</h3>
+                <span class="chip-cat" data-i18n="proj.lang.lang">Lang</span>
+              </div>
+              <p class="text-sm leading-relaxed text-muted-foreground" data-i18n="proj.orion.desc">Uma linguagem. Experimento de compilação e sintaxe.</p>
+            </a>
+            <a class="card block transition-colors hover:border-signal/40" href="https://github.com/HermesSantos/laravel-clean-arch" target="_blank" rel="noreferrer">
+              <div class="mb-3 flex items-center justify-between gap-3">
+                <h3 class="font-mono text-sm">laravel-clean-arch</h3>
+                <span class="chip-cat" data-i18n="proj.lang.php">PHP</span>
+              </div>
+              <p class="text-sm leading-relaxed text-muted-foreground" data-i18n="proj.clean.desc">Esqueleto Laravel em clean architecture.</p>
+            </a>
+            <a class="card block transition-colors hover:border-signal/40" href="https://github.com/HermesSantos/melo_pdf" target="_blank" rel="noreferrer">
+              <div class="mb-3 flex items-center justify-between gap-3">
+                <h3 class="font-mono text-sm">melo_pdf</h3>
+                <span class="chip-cat" data-i18n="proj.lang.js">JavaScript</span>
+              </div>
+              <p class="text-sm leading-relaxed text-muted-foreground" data-i18n="proj.melo.desc">Conversor de imagem para PDF, pensado para o WhatsApp Web.</p>
+            </a>
+            <a class="card block transition-colors hover:border-signal/40" href="https://github.com/HermesSantos/golang-base-api" target="_blank" rel="noreferrer">
+              <div class="mb-3 flex items-center justify-between gap-3">
+                <h3 class="font-mono text-sm">golang-base-api</h3>
+                <span class="chip-cat" data-i18n="proj.lang.go">Go</span>
+              </div>
+              <p class="text-sm leading-relaxed text-muted-foreground" data-i18n="proj.goapi.desc">Base de API em Go para serviços HTTP.</p>
+            </a>
+          </div>
+
+          <div class="mt-10 grid gap-3 sm:grid-cols-3">
+            <div class="stat">
+              <p class="mono-label" data-i18n="metrics.repos">Repos públicos</p>
+              <p id="stat-repos" class="stat-value mt-2">44</p>
+            </div>
+            <div class="stat">
+              <p class="mono-label" data-i18n="metrics.followers">Seguidores</p>
+              <p id="stat-followers" class="stat-value mt-2">38</p>
+            </div>
+            <div class="stat">
+              <p class="mono-label" data-i18n="metrics.since">No GitHub desde</p>
+              <p id="stat-since" class="stat-value mt-2">2021</p>
+            </div>
+          </div>
+          <p class="mt-4 text-xs text-muted-foreground" data-i18n="metrics.source">
+            Dados lidos da API pública do GitHub (HermesSantos), com fallback estático.
+          </p>
+        </div>
+      </section>
+
+      <section id="contato">
+        <div class="mx-auto max-w-page px-4 py-16 sm:px-6 sm:py-20">
+          <p class="flex items-center gap-3">
+            <span class="section-index" data-i18n="contact.index">05</span>
+            <span class="mono-label" data-i18n="contact.eyebrow">Próximo passo</span>
+          </p>
+          <h2 class="section-title" data-i18n="contact.title">Se o problema for software, podemos conversar.</h2>
+          <p class="section-lead" data-i18n="contact.lead">
+            Itajaí, SC. Aberto a conversas sobre produto, arquitetura, qualidade e times que querem menos cerimônia.
+          </p>
+
+          <div class="mt-10 grid gap-3 sm:grid-cols-2">
+            <a class="card block" href="mailto:hermessantos995@gmail.com">
+              <p class="mono-label" data-i18n="contact.email">E-mail</p>
+              <p class="mt-2">hermessantos995@gmail.com</p>
+            </a>
+            <a class="card block" href="tel:+5547933891264">
+              <p class="mono-label" data-i18n="contact.phone">Telefone</p>
+              <p class="mt-2">(47) 9 3389-1264</p>
+            </a>
+            <a class="card block" href="https://www.linkedin.com/in/hermes-santos-8596031a0" target="_blank" rel="noreferrer">
+              <p class="mono-label" data-i18n="contact.linkedin">LinkedIn</p>
+              <p class="mt-2">linkedin.com/in/hermes-santos-8596031a0</p>
+            </a>
+            <a class="card block" href="https://github.com/HermesSantos" target="_blank" rel="noreferrer">
+              <p class="mono-label" data-i18n="contact.github">GitHub</p>
+              <p class="mt-2">github.com/HermesSantos</p>
+            </a>
+          </div>
+
+          <div class="mt-8">
+            <a class="btn btn-primary" href="mailto:hermessantos995@gmail.com" data-i18n="contact.cta">Escrever um e-mail</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-border">
+      <div class="mx-auto grid max-w-page gap-10 px-4 py-12 sm:px-6 md:grid-cols-3">
+        <div>
+          <div class="flex items-center gap-2.5">
+            <span class="brand-mark">HS</span>
+            <span class="font-mono text-sm tracking-wide">HERMES</span>
+          </div>
+          <p class="mt-4 text-sm text-muted-foreground" data-i18n="footer.tagline">Menos cerimônia. Mais software.</p>
+        </div>
+        <div>
+          <p class="mono-label" data-i18n="footer.project">Projeto</p>
+          <ul class="mt-4 space-y-2 text-sm text-muted-foreground">
+            <li><a class="hover:text-foreground" href="https://github.com/HermesSantos" target="_blank" rel="noreferrer">GitHub</a></li>
+            <li><a class="hover:text-foreground" href="https://www.linkedin.com/in/hermes-santos-8596031a0" target="_blank" rel="noreferrer">LinkedIn</a></li>
+            <li><a class="hover:text-foreground" href="mailto:hermessantos995@gmail.com">hermessantos995@gmail.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="mono-label" data-i18n="footer.site">Site</p>
+          <ul class="mt-4 space-y-2 text-sm text-muted-foreground">
+            <li><a class="hover:text-foreground" href="#sobre" data-i18n="nav.about">Sobre</a></li>
+            <li><a class="hover:text-foreground" href="#experiencia" data-i18n="nav.experience">Experiência</a></li>
+            <li><a class="hover:text-foreground" href="#projetos" data-i18n="nav.projects">Projetos</a></li>
+            <li><a class="hover:text-foreground" href="#contato" data-i18n="nav.contact">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-border">
+        <div class="mx-auto flex max-w-page flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6">
+          <p class="text-xs text-muted-foreground" data-i18n="footer.copy">Hermes da Costa Santos · Itajaí, SC</p>
+          <p class="text-xs text-muted-foreground" data-i18n="footer.active">Em desenvolvimento ativo</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
