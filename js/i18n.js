@@ -366,6 +366,8 @@ const I18N = {
 const CODE_SNIPPETS = {
   pt: `package main
 
+import "fmt"
+
 type Hermes struct {
     Role  string // Full Stack
     Stack string // Laravel, NestJS, Go, Vue, React
@@ -373,10 +375,12 @@ type Hermes struct {
 }
 
 func main() {
-    println("Itajaí, SC")
+    fmt.Println("Itajaí, SC")
 }`,
   en: `package main
 
+import "fmt"
+
 type Hermes struct {
     Role  string // Full Stack
     Stack string // Laravel, NestJS, Go, Vue, React
@@ -384,7 +388,7 @@ type Hermes struct {
 }
 
 func main() {
-    println("Itajaí, Brazil")
+    fmt.Println("Itajaí, Brazil")
 }`,
 };
 
