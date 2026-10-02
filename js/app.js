@@ -120,33 +120,71 @@ function renderCode(code) {
 
 let currentLang = "pt";
 
-function t(key) {
-  return (I18N[currentLang] && I18N[currentLang][key]) || I18N.pt[key] || key;
-}
+const ptSource = {
+  title: "",
+  description: "",
+  byKey: { copied: "copiado" },
+  nodes: [],
+  aria: [],
+  code: "",
+};
 
-function applyI18n() {
-  document.documentElement.lang = currentLang === "en" ? "en" : "pt-BR";
-  document.title = t("meta.title");
+function snapshotPt() {
+  ptSource.title = document.title;
   const meta = document.querySelector('meta[name="description"]');
-  if (meta) meta.setAttribute("content", t("meta.description"));
+  ptSource.description = meta ? meta.getAttribute("content") || "" : "";
 
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
-    const value = t(key);
-    if (el.hasAttribute("data-i18n-html")) {
-      el.innerHTML = value;
-    } else {
-      el.textContent = value;
+    const useHtml = el.hasAttribute("data-i18n-html");
+    const value = useHtml ? el.innerHTML : el.textContent;
+    ptSource.nodes.push({ el, useHtml, value });
+    if (key && !(key in ptSource.byKey)) {
+      ptSource.byKey[key] = (el.textContent || "").replace(/^\s+|\s+$/g, "");
     }
   });
 
   document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
-    el.setAttribute("aria-label", t(el.getAttribute("data-i18n-aria")));
+    ptSource.aria.push({ el, value: el.getAttribute("aria-label") || "" });
+  });
+
+  const pre = document.getElementById("hero-code");
+  ptSource.code = pre ? pre.textContent.replace(/^\n/, "").replace(/\n$/, "") : "";
+}
+
+function t(key) {
+  if (currentLang === "en") return I18N[key] || key;
+  return ptSource.byKey[key] || key;
+}
+
+function applyValue(el, value, useHtml) {
+  if (useHtml) el.innerHTML = value;
+  else el.textContent = value;
+}
+
+function applyI18n() {
+  const isEn = currentLang === "en";
+  document.documentElement.lang = isEn ? "en" : "pt-BR";
+
+  document.title = isEn ? I18N["meta.title"] || ptSource.title : ptSource.title;
+  const meta = document.querySelector('meta[name="description"]');
+  if (meta) {
+    meta.setAttribute("content", isEn ? I18N["meta.description"] || ptSource.description : ptSource.description);
+  }
+
+  ptSource.nodes.forEach(({ el, useHtml, value }) => {
+    const key = el.getAttribute("data-i18n");
+    applyValue(el, isEn ? I18N[key] || value : value, useHtml);
+  });
+
+  ptSource.aria.forEach(({ el, value }) => {
+    const key = el.getAttribute("data-i18n-aria");
+    el.setAttribute("aria-label", isEn ? I18N[key] || value : value);
   });
 
   const pre = document.getElementById("hero-code");
   if (pre) {
-    const snippet = CODE_SNIPPETS[currentLang] || CODE_SNIPPETS.pt;
+    const snippet = isEn ? CODE_SNIPPET_EN : ptSource.code;
     pre.innerHTML = renderCode(snippet);
     pre.dataset.source = snippet;
   }
@@ -262,6 +300,7 @@ async function loadGithubStats() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  snapshotPt();
   currentLang = detectLang();
   applyI18n();
   setupCopy();
