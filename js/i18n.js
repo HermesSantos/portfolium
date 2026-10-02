@@ -14,7 +14,7 @@ const I18N = {
     "hero.title": "Hermes da Costa Santos",
     "hero.tagline": "Programador Full Stack",
     "hero.lead":
-      "4 anos em PHP, Laravel, Node.js, NestJS, Go, TypeScript, Vue.js e React. Arquitetura, integrações, testes e sistemas em produção — do legado à plataforma nova.",
+      "4 anos de experiência com PHP, Laravel, Node.js, NestJS, Go, TypeScript, Vue.js e React, em arquitetura, integrações, testes e sistemas em produção.",
     "hero.cta.github": "Ver no GitHub",
     "hero.cta.linkedin": "LinkedIn",
     "hero.cta.email": "E-mail",
@@ -22,33 +22,33 @@ const I18N = {
     "copy": "copiar",
     "copied": "copiado",
     "about.index": "01",
-    "about.eyebrow": "Identidade",
+    "about.eyebrow": "Sobre",
     "about.title":
-      "Full stack com orientação a Clean Code, desempenho e qualidade — em times ágeis e multidisciplinares.",
+      "Desenvolvedor Full Stack com 4 anos de experiência em sistemas web em produção.",
     "about.lead":
-      "Atuação em arquitetura de sistemas, desenvolvimento end-to-end, integração de serviços externos (pagamentos, vídeos, IA) e testes automatizados. Docker, Git, CI/CD, MySQL e PostgreSQL. Liderança técnica em estratégia de testes e mentoria de QA.",
-    "about.right.label": "o que eu entrego",
+      "Trabalho com arquitetura de sistemas, desenvolvimento back-end e front-end, integrações com serviços externos (pagamentos, vídeo, IA) e testes automatizados. Experiência com Docker, Git, CI/CD, MySQL e PostgreSQL, além de liderança na estratégia de testes e mentoria de QA.",
+    "about.right.label": "áreas de atuação",
     "about.right.body":
-      "software em produção\n       │\n       ├── arquitetura end-to-end\n       ├── integrações (pagamentos, vídeo, IA)\n       ├── testes automatizados\n       ├── legado modernizado\n       └── mentoria de QA",
+      "experiência\n       │\n       ├── arquitetura end-to-end\n       ├── integrações (pagamentos, vídeo, IA)\n       ├── testes automatizados\n       ├── legado modernizado\n       └── mentoria de QA",
     "about.ship.prod.label": "produção",
     "about.ship.prod.body":
-      "Sistemas estáveis em órgãos públicos, agro e educação — com correção rápida quando quebra.",
+      "Sistemas em produção para órgãos públicos, agronegócio e educação, incluindo suporte e correção de incidentes.",
     "about.ship.int.label": "integrações",
     "about.ship.int.body":
-      "Vimeo, Panda Video, Gemini, Asaas e AbacatePay ligados ao produto, não soltos no meio do caminho.",
+      "Integrações com Vimeo, Panda Video, Gemini, Asaas e AbacatePay.",
     "about.ship.qa.label": "qualidade",
     "about.ship.qa.body":
-      "Cypress, Pest e Jest. Estratégia de testes, infraestrutura e treino interno de QA.",
+      "Testes com Cypress, Pest e Jest. Definição de estratégia de testes, infraestrutura e treinamento interno de QA.",
     "about.ship.mod.label": "modernização",
     "about.ship.mod.body":
-      "PHP legado virando React e Node. Laravel, Symfony, NestJS, Go e Vue no dia a dia.",
+      "Migração de PHP legado para React e Node. Uso diário de Laravel, Symfony, NestJS, Go e Vue.",
     "about.quote":
-      "Complexidade deve ser resolvida no código quando puder ser resolvida no código. Não esconder. Eliminar.",
+      "Prefiro código simples, testado e fácil de manter.",
     "stack.index": "02",
     "stack.eyebrow": "Ferramentas",
-    "stack.title": "A stack que uso para construir, manter e escalar.",
+    "stack.title": "Tecnologias com as quais trabalho.",
     "stack.lead":
-      "Front, back, dados, qualidade, DevOps e integrações. Tudo o que está no currículo — sem inflar com o que não uso de verdade.",
+      "Ferramentas usadas profissionalmente em front-end, back-end, banco de dados, testes, DevOps e integrações.",
     "stack.vue": "Vue.js",
     "stack.react": "React",
     "stack.ts": "TypeScript",
@@ -79,15 +79,15 @@ const I18N = {
     "cat.ops": "DevOps",
     "cat.int": "Integrações",
     "exp.index": "03",
-    "exp.eyebrow": "Trajetória",
-    "exp.title": "Do trainee ao sênior. Três frentes atuais, o mesmo critério.",
+    "exp.eyebrow": "Experiência",
+    "exp.title": "Experiência profissional",
     "exp.lead":
-      "Sistemas educacionais públicos, gestão pecuária e plataforma de aprendizado. Produção, não demo.",
+      "Atuação em sistemas educacionais públicos, gestão pecuária e plataforma de ensino.",
     "status.current": "Atual",
     "status.closed": "Encerrado",
     "exp.gestorpec.company": "Gestorpec",
     "exp.gestorpec.role": "Desenvolvedor Full Stack — Sênior",
-    "exp.gestorpec.meta": "Setor agro / pecuária · atual",
+    "exp.gestorpec.meta": "Setor agro / pecuária",
     "exp.gestorpec.b1":
       "Evolução de sistema de gestão pecuária: rebanho, pesagens e operações rurais.",
     "exp.gestorpec.b2":
@@ -102,7 +102,7 @@ const I18N = {
       "Organização de demandas, priorização e correção rápida de falhas em produção.",
     "exp.conectaa.company": "Conectaa",
     "exp.conectaa.role": "Desenvolvedor Full Stack — Pleno",
-    "exp.conectaa.meta": "Secretaria de Educação de Itajaí · atual",
+    "exp.conectaa.meta": "Secretaria de Educação de Itajaí",
     "exp.conectaa.b1":
       "Sistemas educacionais usados por órgãos públicos.",
     "exp.conectaa.b2":
@@ -117,7 +117,7 @@ const I18N = {
       "Levantamento de requisitos, fluxos de domínio e estabilidade em produção.",
     "exp.avapro.company": "AVAPRO",
     "exp.avapro.role": "Pleno",
-    "exp.avapro.meta": "Itajaí, SC · 07/2023 — atual",
+    "exp.avapro.meta": "Itajaí, SC",
     "exp.avapro.b1":
       "Manutenção e evolução do sistema principal, com alta disponibilidade.",
     "exp.avapro.b2":
@@ -130,7 +130,7 @@ const I18N = {
       "Liderança da estratégia de testes Cypress: infraestrutura e treinamentos internos.",
     "exp.drcuidado.company": "DrCuidado",
     "exp.drcuidado.role": "Junior",
-    "exp.drcuidado.meta": "Itajaí, SC · 12/2022 — 07/2023",
+    "exp.drcuidado.meta": "Itajaí, SC",
     "exp.drcuidado.b1":
       "Manutenção e correção da plataforma principal em PHP, em produção.",
     "exp.drcuidado.b2":
@@ -139,16 +139,16 @@ const I18N = {
       "Nova plataforma com React e Node.js, saindo do legado com melhor desempenho.",
     "exp.trainee.company": "AVAPRO",
     "exp.trainee.role": "Trainee",
-    "exp.trainee.meta": "Itajaí, SC · 05/2022 — 12/2022",
+    "exp.trainee.meta": "Itajaí, SC",
     "exp.trainee.b1": "Manutenção e evolução do sistema principal da empresa.",
     "exp.trainee.b2":
       "Funcionalidades e correções visando estabilidade e disponibilidade.",
     "exp.trainee.b3": "Participação no desenvolvimento de soluções em Vue.js.",
     "proj.index": "04",
     "proj.eyebrow": "Código aberto",
-    "proj.title": "Projetos públicos. O restante mora em produção.",
+    "proj.title": "Projetos pessoais",
     "proj.lead":
-      "Seleção curada do GitHub — ferramentas, experimentos de linguagem e bases de arquitetura. Trabalho de cliente não entra aqui.",
+      "Alguns repositórios públicos do GitHub: ferramentas de linha de comando, um experimento de linguagem e bases de arquitetura.",
     "proj.aila.desc":
       "Mensagens de commit geradas por IA a partir da linha de comando.",
     "proj.ailago.desc": "Port de Aila (Node.js) para Go.",
@@ -166,17 +166,17 @@ const I18N = {
     "metrics.since": "No GitHub desde",
     "metrics.source": "Dados lidos da API pública do GitHub (HermesSantos), com fallback estático.",
     "contact.index": "05",
-    "contact.eyebrow": "Próximo passo",
-    "contact.title": "Se o problema for software, podemos conversar.",
+    "contact.eyebrow": "Contato",
+    "contact.title": "Contato",
     "contact.lead":
-      "Itajaí, SC. Aberto a conversas sobre produto, arquitetura e qualidade.",
+      "Itajaí, SC. Disponível por e-mail, telefone ou LinkedIn.",
     "contact.email": "E-mail",
     "contact.phone": "Telefone",
     "contact.copyEmail": "Copiar e-mail",
     "contact.copyPhone": "Copiar telefone",
     "contact.linkedin": "LinkedIn",
     "contact.github": "GitHub",
-    "contact.cta": "Escrever um e-mail",
+    "contact.cta": "Enviar e-mail",
     "footer.tagline": "Programador Full Stack · Itajaí, SC",
     "footer.project": "Projeto",
     "footer.site": "Site",
@@ -198,7 +198,7 @@ const I18N = {
     "hero.title": "Hermes da Costa Santos",
     "hero.tagline": "Full Stack developer",
     "hero.lead":
-      "4 years in PHP, Laravel, Node.js, NestJS, Go, TypeScript, Vue.js and React. Architecture, integrations, tests and production systems — from legacy to a new platform.",
+      "4 years of experience with PHP, Laravel, Node.js, NestJS, Go, TypeScript, Vue.js and React, working on architecture, integrations, testing and production systems.",
     "hero.cta.github": "View on GitHub",
     "hero.cta.linkedin": "LinkedIn",
     "hero.cta.email": "Email",
@@ -206,33 +206,33 @@ const I18N = {
     "copy": "copy",
     "copied": "copied",
     "about.index": "01",
-    "about.eyebrow": "Identity",
+    "about.eyebrow": "About",
     "about.title":
-      "Full stack with a bias for Clean Code, performance and quality — in agile, multidisciplinary teams.",
+      "Full Stack developer with 4 years of experience on web systems in production.",
     "about.lead":
-      "System architecture, end-to-end delivery, external integrations (payments, video, AI) and automated tests. Docker, Git, CI/CD, MySQL and PostgreSQL. Technical leadership on test strategy and QA mentoring.",
-    "about.right.label": "what I ship",
+      "I work on system architecture, back-end and front-end development, external service integrations (payments, video, AI) and automated testing. Experience with Docker, Git, CI/CD, MySQL and PostgreSQL, plus leading test strategy and mentoring QA.",
+    "about.right.label": "areas of work",
     "about.right.body":
-      "software in production\n       │\n       ├── end-to-end architecture\n       ├── integrations (payments, video, AI)\n       ├── automated tests\n       ├── legacy modernized\n       └── QA mentoring",
+      "experience\n       │\n       ├── end-to-end architecture\n       ├── integrations (payments, video, AI)\n       ├── automated tests\n       ├── legacy modernized\n       └── QA mentoring",
     "about.ship.prod.label": "production",
     "about.ship.prod.body":
-      "Stable systems for public agencies, agribusiness and education — and a fast fix when something breaks.",
+      "Production systems for public agencies, agribusiness and education, including support and incident fixes.",
     "about.ship.int.label": "integrations",
     "about.ship.int.body":
-      "Vimeo, Panda Video, Gemini, Asaas and AbacatePay wired into the product, not left halfway.",
+      "Integrations with Vimeo, Panda Video, Gemini, Asaas and AbacatePay.",
     "about.ship.qa.label": "quality",
     "about.ship.qa.body":
-      "Cypress, Pest and Jest. Test strategy, infrastructure and internal QA training.",
+      "Testing with Cypress, Pest and Jest. Test strategy, infrastructure and internal QA training.",
     "about.ship.mod.label": "modernization",
     "about.ship.mod.body":
-      "PHP legacy becoming React and Node. Laravel, Symfony, NestJS, Go and Vue day to day.",
+      "Migrated legacy PHP to React and Node. Daily work with Laravel, Symfony, NestJS, Go and Vue.",
     "about.quote":
-      "Complexity should be solved in code when it can be solved in code. Don't hide it. Remove it.",
+      "I prefer code that is simple, tested and easy to maintain.",
     "stack.index": "02",
     "stack.eyebrow": "Tools",
-    "stack.title": "The stack I use to build, maintain and scale.",
+    "stack.title": "Technologies I work with.",
     "stack.lead":
-      "Front, back, data, quality, DevOps and integrations. Everything on the résumé — nothing padded.",
+      "Tools used professionally across front-end, back-end, databases, testing, DevOps and integrations.",
     "stack.vue": "Vue.js",
     "stack.react": "React",
     "stack.ts": "TypeScript",
@@ -263,21 +263,21 @@ const I18N = {
     "cat.ops": "DevOps",
     "cat.int": "Integrations",
     "exp.index": "03",
-    "exp.eyebrow": "Path",
-    "exp.title": "From trainee to senior. Three current fronts, one standard.",
+    "exp.eyebrow": "Experience",
+    "exp.title": "Professional experience",
     "exp.lead":
-      "Public education systems, livestock management and a learning platform. Production, not demos.",
+      "Work on public education systems, livestock management and a learning platform.",
     "status.current": "Current",
     "status.closed": "Closed",
     "exp.gestorpec.company": "Gestorpec",
     "exp.gestorpec.role": "Full Stack Developer — Senior",
-    "exp.gestorpec.meta": "Agribusiness / livestock · current",
+    "exp.gestorpec.meta": "Agribusiness / livestock",
     "exp.gestorpec.b1":
       "Evolution of a livestock management system: herds, weighings and farm operations.",
     "exp.gestorpec.b2":
-      "Hands-on technical decisions, architecture and project organization.",
+      "Technical decisions, architecture and project organization.",
     "exp.gestorpec.b3":
-      "Laravel/Symfony backend and Vue.js frontend, with tight layer integration.",
+      "Laravel/Symfony backend and Vue.js frontend, with integration between layers.",
     "exp.gestorpec.b4":
       "MySQL modeling and optimization for performance and consistency.",
     "exp.gestorpec.b5":
@@ -286,7 +286,7 @@ const I18N = {
       "Demand organization, prioritization and fast production incident fixes.",
     "exp.conectaa.company": "Conectaa",
     "exp.conectaa.role": "Full Stack Developer — Mid-level",
-    "exp.conectaa.meta": "Itajaí Department of Education · current",
+    "exp.conectaa.meta": "Itajaí Department of Education",
     "exp.conectaa.b1": "Educational systems used by public agencies.",
     "exp.conectaa.b2": "Symfony and NestJS backend, Vue.js frontend.",
     "exp.conectaa.b3": "Service and API integration across systems.",
@@ -298,7 +298,7 @@ const I18N = {
       "Requirements gathering, domain flows and production stability.",
     "exp.avapro.company": "AVAPRO",
     "exp.avapro.role": "Mid-level",
-    "exp.avapro.meta": "Itajaí, Brazil · 07/2023 — present",
+    "exp.avapro.meta": "Itajaí, Brazil",
     "exp.avapro.b1":
       "Maintenance and evolution of the core system, with high availability.",
     "exp.avapro.b2": "Interactive Vue.js game for learning reinforcement.",
@@ -309,7 +309,7 @@ const I18N = {
       "Led the Cypress test strategy: infrastructure and internal training.",
     "exp.drcuidado.company": "DrCuidado",
     "exp.drcuidado.role": "Junior",
-    "exp.drcuidado.meta": "Itajaí, Brazil · 12/2022 — 07/2023",
+    "exp.drcuidado.meta": "Itajaí, Brazil",
     "exp.drcuidado.b1":
       "Maintenance and fixes on the main PHP platform, in production.",
     "exp.drcuidado.b2": "Deploys, PostgreSQL and critical error handling.",
@@ -317,16 +317,16 @@ const I18N = {
       "New platform with React and Node.js, leaving legacy behind with better performance.",
     "exp.trainee.company": "AVAPRO",
     "exp.trainee.role": "Trainee",
-    "exp.trainee.meta": "Itajaí, Brazil · 05/2022 — 12/2022",
+    "exp.trainee.meta": "Itajaí, Brazil",
     "exp.trainee.b1": "Maintenance and evolution of the company's core system.",
     "exp.trainee.b2":
       "Features and fixes aimed at stability and availability.",
     "exp.trainee.b3": "Contributed to Vue.js solutions.",
     "proj.index": "04",
     "proj.eyebrow": "Open source",
-    "proj.title": "Public projects. The rest lives in production.",
+    "proj.title": "Personal projects",
     "proj.lead":
-      "A curated slice of GitHub — tools, a language experiment and architecture bases. Client work stays off this page.",
+      "A few public GitHub repositories: command-line tools, a language experiment and architecture templates.",
     "proj.aila.desc": "AI-generated git commit messages from the command line.",
     "proj.ailago.desc": "Aila (Node.js) ported to Go.",
     "proj.orion.desc": "A language. Compilation and syntax experiment.",
@@ -344,17 +344,17 @@ const I18N = {
     "metrics.source":
       "Read live from the public GitHub API (HermesSantos), with a static fallback.",
     "contact.index": "05",
-    "contact.eyebrow": "Next step",
-    "contact.title": "If the problem is software, we can talk.",
+    "contact.eyebrow": "Contact",
+    "contact.title": "Contact",
     "contact.lead":
-      "Itajaí, Brazil. Open to conversations about product, architecture and quality.",
+      "Itajaí, Brazil. Reachable by email, phone or LinkedIn.",
     "contact.email": "Email",
     "contact.phone": "Phone",
     "contact.copyEmail": "Copy email",
     "contact.copyPhone": "Copy phone",
     "contact.linkedin": "LinkedIn",
     "contact.github": "GitHub",
-    "contact.cta": "Write an email",
+    "contact.cta": "Send email",
     "footer.tagline": "Full Stack developer · Itajaí, Brazil",
     "footer.project": "Project",
     "footer.site": "Site",
